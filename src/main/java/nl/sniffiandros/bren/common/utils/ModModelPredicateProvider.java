@@ -18,6 +18,7 @@ public class ModModelPredicateProvider {
         regMag(ItemReg.MAGAZINE);
         regMag(ItemReg.CLOTHED_MAGAZINE);
         regMag(ItemReg.SHORT_MAGAZINE);
+        regMag(ItemReg.LIGHT_MAGAZINE);
     }
 
 

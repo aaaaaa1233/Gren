@@ -79,11 +79,15 @@ public class ItemReg {
             new FabricItemSettings().fireproof(), ToolMaterials.NETHERITE, new GunProperties().rangedDamage(N_REVOLVER_DAMAGE).fireRate(15).recoil(REVOLVER_RECOIL)
             .shootSound(SoundReg.ITEM_REVOLVER_SHOOT, null)));
 
+    public static final Item PISTOL = registerItem("pistol", new PistolItem(
+            new FabricItemSettings(), ToolMaterials.IRON, TagReg.LIGHT_MAGAZINES, new GunProperties().rangedDamage(MACHINE_GUN_DAMAGE).fireRate(7).recoil(MACHINE_GUN_RECOIL)
+            .shootSound(SoundReg.ITEM_MACHINE_GUN_SHOOT, SoundReg.ITEM_MACHINE_GUN_SHOOT_SILENCED)));
+
     public static final Item MAGAZINE = registerItem("magazine", new MagazineItem(new FabricItemSettings(), 20));
     public static final Item CLOTHED_MAGAZINE = registerItem("clothed_magazine", new ColorableMagazineItem(new FabricItemSettings(), 20));
 
     public static final Item SHORT_MAGAZINE = registerItem("short_magazine", new MagazineItem(new FabricItemSettings(), 6));
-
+    public static final Item LIGHT_MAGAZINE = registerItem("light_magazine", new MagazineItem(new FabricItemSettings(), 13));
     public static final Item BULLET = registerItem("bullet", new Item(new FabricItemSettings()));
     public static final Item SHELL = registerItem("shell", new Item(new FabricItemSettings()));
     public static final Item AUTO_LOADER_CONTRAPTION = registerItem("auto_loader_contraption", new Item(new FabricItemSettings()));
