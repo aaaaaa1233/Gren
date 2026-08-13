@@ -1,4 +1,3 @@
-# Bren
- A vanilla-like gun mod for Minecraft
-
-![STOP ASKING](https://cdn.modrinth.com/data/FJEfFMqn/images/abf28c1cbc650277e26d40a92d854aa1803a746f.png)
+# Gren
+A fork of Bren that adds new guns to the mod,
+and reworks previous gun crafting recipes to make the new guns fit in the crafting table
