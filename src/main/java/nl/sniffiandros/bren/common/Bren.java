@@ -73,7 +73,8 @@ public class Bren implements ModInitializer {
             ItemStack light_mag = mag(lm);
 
 			content.addAfter(Items.CROSSBOW, ItemReg.MACHINE_GUN);
-			content.addAfter(ItemReg.MACHINE_GUN, ItemReg.AUTO_GUN);
+            content.addAfter(ItemReg.MACHINE_GUN, ItemReg.SMG);
+			content.addAfter(ItemReg.SMG, ItemReg.AUTO_GUN);
 			content.addAfter(ItemReg.AUTO_GUN, ItemReg.SHOTGUN);
 			content.addAfter(ItemReg.SHOTGUN, ItemReg.RIFLE);
 			content.addAfter(ItemReg.RIFLE, ItemReg.REVOLVER);

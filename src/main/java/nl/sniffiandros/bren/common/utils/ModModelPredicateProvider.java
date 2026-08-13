@@ -12,6 +12,7 @@ public class ModModelPredicateProvider {
         regGun(ItemReg.MACHINE_GUN, true);
         regGun(ItemReg.AUTO_GUN, true);
         regGun(ItemReg.RIFLE, false);
+        regGun(ItemReg.SMG, false);
         regGun(ItemReg.NETHERITE_MACHINE_GUN, true);
         regGun(ItemReg.NETHERITE_AUTO_GUN, true);
         regGun(ItemReg.NETHERITE_RIFLE, false);
