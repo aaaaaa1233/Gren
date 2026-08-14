@@ -34,6 +34,9 @@ public class ItemReg {
     public static final float SHOTGUN_DAMAGE = MConfig.shotgunDamage.get();
     public static final float N_SHOTGUN_DAMAGE = MConfig.netheriteShotgunDamage.get();
 
+    public static final float DB_SHOTGUN_RECOIL = 35f;
+    public static final float DB_SHOTGUN_DAMAGE = MConfig.dbshotgunDamage.get();
+
     // Revolver
     public static final float REVOLVER_RECOIL = 15f;
     public static final float REVOLVER_DAMAGE = MConfig.revolverDamage.get();
@@ -86,6 +89,10 @@ public class ItemReg {
     public static final Item SMG = registerItem("smg", new GunWithMagItem(
             new FabricItemSettings() , ToolMaterials.IRON, TagReg.LIGHT_MAGAZINES, new GunProperties().rangedDamage(SMG_DAMAGE).fireRate(2).recoil(MACHINE_GUN_RECOIL)
             .shootSound(SoundReg.ITEM_MACHINE_GUN_SHOOT, SoundReg.ITEM_MACHINE_GUN_SHOOT_SILENCED)));
+
+    public static final Item DB_SHOTGUN = registerItem("db_shotgun", new DBShotgunItem(
+            new FabricItemSettings(), ToolMaterials.IRON, new GunProperties().rangedDamage(DB_SHOTGUN_DAMAGE).fireRate(10).recoil(SHOTGUN_RECOIL).bulletSpeed(1.8F)
+            .shootSound(SoundReg.ITEM_DB_SHOTGUN_SHOOT, null)));
 
 
     public static final Item REVOLVER = registerItem("revolver", new RevolverItem(

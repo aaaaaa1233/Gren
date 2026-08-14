@@ -14,6 +14,7 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.math.RotationAxis;
 import net.minecraft.world.World;
+import nl.sniffiandros.bren.common.Bren;
 import nl.sniffiandros.bren.common.entity.IGunUser;
 import nl.sniffiandros.bren.common.registry.EnchantmentReg;
 import nl.sniffiandros.bren.common.registry.SoundReg;
@@ -30,6 +31,8 @@ public class PistolItem extends GunWithMagItem {
     public PoseType holdingPose() {
         return PoseType.REVOLVER;
     }
+
+
 
     @Override
     public boolean applyCustomMatrix(LivingEntity entity, GunHelper.GunStates state, MatrixStack matrices, ItemStack stack, float cooldownProgress, ModelTransformationMode renderMode, boolean leftHanded) {
@@ -57,10 +60,9 @@ public class PistolItem extends GunWithMagItem {
         return true;
     }
 
-    @Override
-    public int reloadSpeed() {
-        return 15;
-    }
+
+
+
 
     @Override
     public boolean renderOnBack() {

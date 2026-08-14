@@ -23,6 +23,18 @@
       "bren:shotgun_shot"
     ]
   },
+  "item.db_shotgun_shoot": {
+    "subtitle": "bren.item.shoot",
+    "sounds": [
+      "bren:db_shotgun_shot"
+    ]
+  },
+  "item.db_shotgun_reload": {
+    "subtitle": "bren.item.rack",
+    "sounds": [
+      "bren:db_shotgun_reload"
+    ]
+  },
   "item.shotgun.shell_insert": {
     "subtitle": "bren.item.shell_insert",
     "sounds": [
@@ -104,6 +116,12 @@
       "bren:magazine_remove"
     ]
   },
+
+
+
+
+
+
   "entity.villager.work_gunsmith": {
     "subtitle": "bren.entity.villager.work_gunsmith",
     "sounds": [
