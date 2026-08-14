@@ -44,6 +44,9 @@ public class MConfig {
     @Entry()
     public static final ConfigHelper.FloatValue machineGunDamage = new ConfigHelper.FloatValue(4.5f,
             "Ranged damage for the Machine Gun");
+    @Entry()
+    public static final ConfigHelper.FloatValue heavyMGDamage = new ConfigHelper.FloatValue(3.5f,
+            "Ranged damage for the Heavy MG");
 
     @Entry()
     public static final ConfigHelper.FloatValue netheriteMachineGunDamage = new ConfigHelper.FloatValue(5f,

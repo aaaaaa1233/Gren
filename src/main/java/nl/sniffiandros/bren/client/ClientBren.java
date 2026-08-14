@@ -63,6 +63,7 @@ public class ClientBren implements ClientModInitializer {
 
         List<ModelIdentifier> modelIdentifierList = new ArrayList<>();
         registerGUIModels(Registries.ITEM.getId(ItemReg.MACHINE_GUN), modelIdentifierList, true, true);
+        registerGUIModels(Registries.ITEM.getId(ItemReg.HEAVY_MG), modelIdentifierList, false, true);
         registerGUIModels(Registries.ITEM.getId(ItemReg.AUTO_GUN), modelIdentifierList, true, true);
         registerGUIModels(Registries.ITEM.getId(ItemReg.RIFLE), modelIdentifierList, false, true);
         registerGUIModels(Registries.ITEM.getId(ItemReg.SMG), modelIdentifierList, false, true);

@@ -67,12 +67,15 @@ public class Bren implements ModInitializer {
 			MagazineItem cm = (MagazineItem) ItemReg.CLOTHED_MAGAZINE;
 			MagazineItem sm = (MagazineItem) ItemReg.SHORT_MAGAZINE;
             MagazineItem lm = (MagazineItem) LIGHT_MAGAZINE;
+            MagazineItem hm = (MagazineItem) ItemReg.HEAVY_MAGAZINE;
 			ItemStack mag = mag(m);
 			ItemStack clothed_mag = mag(cm);
 			ItemStack short_mag = mag(sm);
             ItemStack light_mag = mag(lm);
+            ItemStack heavy_mag = mag(hm);
 
-			content.addAfter(Items.CROSSBOW, ItemReg.MACHINE_GUN);
+            content.addAfter(Items.CROSSBOW, ItemReg.HEAVY_MG);
+			content.addAfter(ItemReg.HEAVY_MG, ItemReg.MACHINE_GUN);
             content.addAfter(ItemReg.MACHINE_GUN, ItemReg.SMG);
 			content.addAfter(ItemReg.SMG, ItemReg.AUTO_GUN);
 			content.addAfter(ItemReg.AUTO_GUN, ItemReg.SHOTGUN);
@@ -86,7 +89,9 @@ public class Bren implements ModInitializer {
 			content.addAfter(ItemReg.NETHERITE_AUTO_GUN, ItemReg.NETHERITE_SHOTGUN);
 			content.addAfter(ItemReg.NETHERITE_SHOTGUN, ItemReg.NETHERITE_RIFLE);
 			content.addAfter(ItemReg.NETHERITE_RIFLE, ItemReg.NETHERITE_REVOLVER);
-			content.addAfter(Items.DIAMOND_HORSE_ARMOR, ItemReg.MAGAZINE);
+			content.addAfter(Items.DIAMOND_HORSE_ARMOR, ItemReg.HEAVY_MAGAZINE);
+            content.addAfter(ItemReg.HEAVY_MAGAZINE, heavy_mag);
+            content.addAfter(heavy_mag, ItemReg.MAGAZINE);
 			content.addAfter(ItemReg.MAGAZINE, mag);
 			content.addAfter(mag, ItemReg.CLOTHED_MAGAZINE);
 			content.addAfter(ItemReg.CLOTHED_MAGAZINE, clothed_mag);

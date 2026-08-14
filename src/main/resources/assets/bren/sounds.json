@@ -5,6 +5,24 @@
       "bren:machine_gun_shot"
     ]
   },
+  "item.smg.shoot": {
+    "subtitle": "bren.item.shoot",
+    "sounds": [
+      "bren:smg_shot"
+    ]
+  },
+  "item.pistol.shoot": {
+    "subtitle": "bren.item.shoot",
+    "sounds": [
+      "bren:pistol_shot"
+    ]
+  },
+  "item.heavy_mg.shoot": {
+    "subtitle": "bren.item.shoot",
+    "sounds": [
+      "bren:heavy_mg_shot"
+    ]
+  },
   "item.auto_gun.shoot": {
     "subtitle": "bren.item.shoot",
     "sounds": [

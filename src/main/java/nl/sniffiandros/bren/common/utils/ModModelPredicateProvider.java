@@ -10,6 +10,7 @@ import nl.sniffiandros.bren.common.registry.custom.MagazineItem;
 public class ModModelPredicateProvider {
     public static void regModels() {
         regGun(ItemReg.MACHINE_GUN, true);
+        regGun(ItemReg.HEAVY_MG, false);
         regGun(ItemReg.AUTO_GUN, true);
         regGun(ItemReg.RIFLE, false);
         regGun(ItemReg.SMG, false);
@@ -18,6 +19,7 @@ public class ModModelPredicateProvider {
         regGun(ItemReg.NETHERITE_RIFLE, false);
         regMag(ItemReg.MAGAZINE);
         regMag(ItemReg.CLOTHED_MAGAZINE);
+        regMag(ItemReg.HEAVY_MAGAZINE);
         regMag(ItemReg.SHORT_MAGAZINE);
         regMag(ItemReg.LIGHT_MAGAZINE);
     }

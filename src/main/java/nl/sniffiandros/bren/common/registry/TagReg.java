@@ -11,6 +11,7 @@ import nl.sniffiandros.bren.common.Bren;
 
 public class TagReg {
     public static final TagKey<Item> MEDIUM_MAGAZINES = itemTag("magazines/medium_magazines");
+    public static final TagKey<Item> HEAVY_MAGAZINES = itemTag("magazines/heavy_magazines");
     public static final TagKey<Item> SHORT_MAGAZINES = itemTag("magazines/short_magazines");
     public static final TagKey<Item> LIGHT_MAGAZINES = itemTag("magazines/light_magazines");
     public static final TagKey<DamageType> IS_BULLET = damageTypeTag("is_bullet");

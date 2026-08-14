@@ -8,6 +8,9 @@ import nl.sniffiandros.bren.common.Bren;
 
 public class SoundReg {
     public static SoundEvent ITEM_MACHINE_GUN_SHOOT = register("item.machine_gun.shoot");
+    public static SoundEvent ITEM_SMG_SHOOT = register("item.smg.shoot");
+    public static SoundEvent ITEM_PISTOL_SHOOT = register("item.pistol.shoot");
+    public static SoundEvent ITEM_HEAVY_MG_SHOOT = register("item.heavy_mg.shoot");
     public static SoundEvent ITEM_AUTO_GUN_SHOOT = register("item.auto_gun.shoot");
     public static SoundEvent ITEM_RIFLE_SHOOT = register("item.rifle.shoot");
     public static SoundEvent ITEM_RIFLE_SHOOT_SILENCED = register("item.rifle.shoot_silenced");

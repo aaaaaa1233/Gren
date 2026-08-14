@@ -1,5 +1,6 @@
 {
   "item.bren.machine_gun": "Machine Gun",
+  "item.bren.heavy_mg": "Heavy MG",
   "item.bren.auto_gun": "Auto-Gun",
   "item.bren.rifle": "Rifle",
   "item.bren.shotgun": "Shotgun",
@@ -17,6 +18,7 @@
   "item.bren.short_magazine": "Short Magazine",
   "item.bren.clothed_magazine": "Clothed Magazine",
   "item.bren.light_magazine": "Light Magazine",
+  "item.bren.heavy_magazine": "Heavy Magazine",
   "item.bren.bullet": "Bullet",
   "item.bren.shell": "Shell",
   "item.bren.metal_tube": "Metal Tube",
