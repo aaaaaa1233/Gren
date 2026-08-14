@@ -5,24 +5,21 @@
     "M": {
       "item": "minecraft:gold_ingot"
     },
-    "P": {
-      "item": "minecraft:paper"
-    },
     "G": {
-      "item": "minecraft:gunpowder"
+      "item": "minecraft:iron_ingot"
     },
     "N": {
       "item": "minecraft:iron_nugget"
     }
   },
   "pattern": [
-    " PN",
-    "MNP",
-    "GM "
+    "GM ",
+    "MNM",
+    " MG"
   ],
   "result": {
-    "item": "bren:shell",
-    "count": 12
+    "item": "bren:auto_loader_contraption",
+    "count": 1
   },
   "show_notification": true
 }
