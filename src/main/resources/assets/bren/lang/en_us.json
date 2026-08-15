@@ -1,8 +1,10 @@
 {
   "item.bren.machine_gun": "Machine Gun",
   "item.bren.heavy_mg": "Heavy MG",
+  "item.bren.heavy_rifle": "Heavy Rifle",
   "item.bren.auto_gun": "Auto-Gun",
   "item.bren.rifle": "Rifle",
+  "item.bren.auto_shotgun": "Auto Shotgun",
   "item.bren.shotgun": "Shotgun",
   "item.bren.db_shotgun": "DB Shotgun",
   "item.bren.revolver": "Revolver",
@@ -21,6 +23,7 @@
   "item.bren.heavy_magazine": "Heavy Magazine",
   "item.bren.bullet": "Bullet",
   "item.bren.shell": "Shell",
+  "item.bren.diamond_bullet": "Diamond Tipped Bullet",
   "item.bren.metal_tube": "Metal Tube",
   "item.bren.auto_loader_contraption": "AutoLoader Contraption",
 

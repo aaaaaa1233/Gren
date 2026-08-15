@@ -77,6 +77,14 @@ public class MConfig {
             "Damage per shrapnel for the DB Shotgun");
 
     @Entry()
+    public static final ConfigHelper.FloatValue autoshotgunDamage = new ConfigHelper.FloatValue(4f,
+            "Damage per shrapnel for the Auto Shotgun");
+
+    @Entry()
+    public static final ConfigHelper.FloatValue heavyrifleDamage = new ConfigHelper.FloatValue(6f,
+            "Damage per shrapnel for the Heavy Rifle");
+
+    @Entry()
     public static final ConfigHelper.FloatValue netheriteShotgunDamage = new ConfigHelper.FloatValue(4.5f,
             "Damage per shrapnel for the Netherite Shotgun");
 

@@ -11,6 +11,12 @@ public class SoundReg {
     public static SoundEvent ITEM_SMG_SHOOT = register("item.smg.shoot");
     public static SoundEvent ITEM_PISTOL_SHOOT = register("item.pistol.shoot");
     public static SoundEvent ITEM_HEAVY_MG_SHOOT = register("item.heavy_mg.shoot");
+    public static SoundEvent ITEM_HEAVY_RIFLE_SHOOT = register("item.heavy_rifle.shoot");
+    public static SoundEvent ITEM_HEAVY_RIFLE_RACK = register("item.heavy_rifle.rack");
+    public static SoundEvent ITEM_HEAVY_RIFLE_INSERT = register("item.heavy_rifle.insert");
+    public static SoundEvent ITEM_SMG_SHOOT_SILENCED = register("item.smg.shoot_silenced");
+    public static SoundEvent ITEM_PISTOL_SHOOT_SILENCED = register("item.pistol.shoot_silenced");
+    public static SoundEvent ITEM_HEAVY_MG_SHOOT_SILENCED = register("item.heavy_mg.shoot_silenced");
     public static SoundEvent ITEM_AUTO_GUN_SHOOT = register("item.auto_gun.shoot");
     public static SoundEvent ITEM_RIFLE_SHOOT = register("item.rifle.shoot");
     public static SoundEvent ITEM_RIFLE_SHOOT_SILENCED = register("item.rifle.shoot_silenced");

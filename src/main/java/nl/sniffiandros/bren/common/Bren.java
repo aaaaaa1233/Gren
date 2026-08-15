@@ -78,11 +78,12 @@ public class Bren implements ModInitializer {
 			content.addAfter(ItemReg.HEAVY_MG, ItemReg.MACHINE_GUN);
             content.addAfter(ItemReg.MACHINE_GUN, ItemReg.SMG);
 			content.addAfter(ItemReg.SMG, ItemReg.AUTO_GUN);
-			content.addAfter(ItemReg.AUTO_GUN, ItemReg.SHOTGUN);
+            content.addAfter(ItemReg.AUTO_GUN, ItemReg.AUTO_SHOTGUN);
+			content.addAfter(ItemReg.AUTO_SHOTGUN, ItemReg.SHOTGUN);
             content.addAfter(ItemReg.SHOTGUN, ItemReg.DB_SHOTGUN);
 			content.addAfter(ItemReg.DB_SHOTGUN, ItemReg.RIFLE);
-
-			content.addAfter(ItemReg.RIFLE, ItemReg.REVOLVER);
+            content.addAfter(ItemReg.RIFLE, ItemReg.HEAVY_RIFLE);
+			content.addAfter(ItemReg.HEAVY_RIFLE, ItemReg.REVOLVER);
             content.addAfter(ItemReg.REVOLVER, ItemReg.PISTOL);
 			content.addAfter(ItemReg.PISTOL, ItemReg.NETHERITE_MACHINE_GUN);
 			content.addAfter(ItemReg.NETHERITE_MACHINE_GUN, ItemReg.NETHERITE_AUTO_GUN);

@@ -66,17 +66,24 @@ public class HudOverlay implements HudRenderCallback {
         RenderSystem.disableDepthTest();
 
         int rows = 2;
-
+        // thiz iz the part that arenderz the bulletz into rowz
         for (int n = 0; n < max; ++n) {
 
             int ri = rows * 10;
 
             int row = (int) Math.floor(n/ri);
 
+
             int y1 = n * 6 - row*ri*6;
             int x1 = 15*row + 15;
 
-            int u1 = n < i ? 0 : 24;
+            int u1 = n < i ? 0 : 36;
+            // what this does is like idk?? how do i aorajmfeaknte
+
+            // x1 and y1 render the posistion of each bullet
+
+            // the u and v parts decide what bullet to draw but i have no idea on how to
+            // make it register a third bullet to draw
 
             addBulletIcon(context,x1, y1, u + u1, 0);
         }
@@ -88,6 +95,7 @@ public class HudOverlay implements HudRenderCallback {
     }
 
     public void addBulletIcon(DrawContext context, int x, int y,int u, int v) {
-        context.drawTexture(BULLET_ICONS, x, y, u, v, 12, 12, 48, 12);
+        // thiz iz the important partt
+        context.drawTexture(BULLET_ICONS, x, y, u, v, 12, 12, 72, 12);
     }
 }
