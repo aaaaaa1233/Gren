@@ -1,6 +1,5 @@
 package nl.sniffiandros.bren.common.registry;
 
-import net.minecraft.block.Block;
 import net.minecraft.entity.attribute.ClampedEntityAttribute;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.registry.Registries;

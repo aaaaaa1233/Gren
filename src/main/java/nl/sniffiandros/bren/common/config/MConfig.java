@@ -49,6 +49,10 @@ public class MConfig {
             "Ranged damage for the Heavy MG");
 
     @Entry()
+    public static final ConfigHelper.FloatValue netheriteheavyMGDamage = new ConfigHelper.FloatValue(4f,
+            "Ranged damage for the Netherite Heavy MG");
+
+    @Entry()
     public static final ConfigHelper.FloatValue netheriteMachineGunDamage = new ConfigHelper.FloatValue(5f,
             "Ranged damage for the Netherite Machine Gun");
 
@@ -73,36 +77,61 @@ public class MConfig {
             "Damage per shrapnel for the Shotgun");
 
     @Entry()
+    public static final ConfigHelper.FloatValue netheriteShotgunDamage = new ConfigHelper.FloatValue(4.5f,
+            "Damage per shrapnel for the Netherite Shotgun");
+
+    @Entry()
     public static final ConfigHelper.FloatValue dbshotgunDamage = new ConfigHelper.FloatValue(2f,
             "Damage per shrapnel for the DB Shotgun");
+
+    @Entry()
+    public static final ConfigHelper.FloatValue netheritedbshotgunDamage = new ConfigHelper.FloatValue(2.5f,
+            "Damage per shrapnel for the Netherite DB Shotgun");
 
     @Entry()
     public static final ConfigHelper.FloatValue autoshotgunDamage = new ConfigHelper.FloatValue(4f,
             "Damage per shrapnel for the Auto Shotgun");
 
     @Entry()
+    public static final ConfigHelper.FloatValue netheriteautoshotgunDamage = new ConfigHelper.FloatValue(4.5f,
+            "Damage per shrapnel for the Netherite Auto Shotgun");
+
+
+    @Entry()
     public static final ConfigHelper.FloatValue heavyrifleDamage = new ConfigHelper.FloatValue(6f,
             "Damage per shrapnel for the Heavy Rifle");
 
     @Entry()
-    public static final ConfigHelper.FloatValue netheriteShotgunDamage = new ConfigHelper.FloatValue(4.5f,
-            "Damage per shrapnel for the Netherite Shotgun");
+    public static final ConfigHelper.FloatValue netheriteheavyrifleDamage = new ConfigHelper.FloatValue(7f,
+            "Damage per shrapnel for the Netherite Heavy Rifle");
+
+
 
     @Entry()
     public static final ConfigHelper.FloatValue revolverDamage = new ConfigHelper.FloatValue(8f,
             "Ranged damage for the Revolver");
 
     @Entry()
+    public static final ConfigHelper.FloatValue netheriteRevolverDamage = new ConfigHelper.FloatValue(8.5f,
+            "Ranged damage for the Netherite Revolver");
+
+    @Entry()
     public static final ConfigHelper.FloatValue pistolDamage = new ConfigHelper.FloatValue(7f,
             "Ranged damage for the pistol!!");
+
+    @Entry()
+    public static final ConfigHelper.FloatValue netheritepistolDamage = new ConfigHelper.FloatValue(7.5f,
+            "Ranged damage for the Netherite pistol!!");
 
     @Entry()
     public static final ConfigHelper.FloatValue smgDamage = new ConfigHelper.FloatValue(4f,
             "Ranged damage for the smg!!");
 
     @Entry()
-    public static final ConfigHelper.FloatValue netheriteRevolverDamage = new ConfigHelper.FloatValue(8.5f,
-            "Ranged damage for the Netherite Revolver");
+    public static final ConfigHelper.FloatValue netheritesmgDamage = new ConfigHelper.FloatValue(4.5f,
+            "Ranged damage for the netherite smg!!");
+
+
 
     public static void init() {
         if (!file.exists()) {

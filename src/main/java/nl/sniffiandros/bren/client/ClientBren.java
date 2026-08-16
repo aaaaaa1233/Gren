@@ -27,6 +27,7 @@ import nl.sniffiandros.bren.client.particle.AirRingParticle;
 import nl.sniffiandros.bren.client.particle.MuzzleSmokeParticle;
 import nl.sniffiandros.bren.client.particle.CasingParticle;
 import nl.sniffiandros.bren.common.registry.*;
+import nl.sniffiandros.bren.common.registry.*;
 import nl.sniffiandros.bren.common.registry.custom.types.GunWithMagItem;
 import nl.sniffiandros.bren.common.utils.ModModelPredicateProvider;
 import org.joml.Matrix4f;
@@ -75,7 +76,11 @@ public class ClientBren implements ClientModInitializer {
         registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_AUTO_GUN), modelIdentifierList, true, true);
         registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_RIFLE), modelIdentifierList, false, true);
         registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_SHOTGUN), modelIdentifierList, false, false);
-
+        registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_AUTO_SHOTGUN), modelIdentifierList, false, false);
+        registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_DB_SHOTGUN), modelIdentifierList, false, false);
+        registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_HEAVY_RIFLE), modelIdentifierList, false, false);
+        registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_HEAVY_MG), modelIdentifierList, false, true);
+        registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_SMG), modelIdentifierList, false, true);
         ModelLoadingPlugin.register(
                 (manager) -> manager.addModels(
                         modelIdentifierList)

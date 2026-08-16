@@ -2,7 +2,6 @@ package nl.sniffiandros.bren.common.registry.custom.enchantment;
 
 import net.minecraft.item.ItemStack;
 import nl.sniffiandros.bren.common.registry.custom.types.MachineGunItem;
-import nl.sniffiandros.bren.common.registry.custom.types.ShotgunItem;
 
 public class MountedEnchantment extends GunEnchantment {
     public MountedEnchantment(Rarity weight) {

@@ -6,6 +6,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import nl.sniffiandros.bren.common.Bren;
 import nl.sniffiandros.bren.common.registry.custom.enchantment.*;
+import nl.sniffiandros.bren.common.registry.custom.enchantment.*;
 
 public class EnchantmentReg {
     public static Enchantment OVERFLOW = register("overflow", new OverflowEnchantment(Enchantment.Rarity.RARE));

@@ -4,7 +4,6 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import nl.sniffiandros.bren.client.renderer.RecoilSys;
-import nl.sniffiandros.bren.client.renderer.WeaponTickHolder;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

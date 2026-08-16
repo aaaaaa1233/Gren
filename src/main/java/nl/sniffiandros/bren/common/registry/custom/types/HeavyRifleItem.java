@@ -1,20 +1,14 @@
 package nl.sniffiandros.bren.common.registry.custom.types;
 
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.player.ItemCooldownManager;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.world.World;
-import nl.sniffiandros.bren.common.Bren;
-import nl.sniffiandros.bren.common.entity.IGunUser;
 import nl.sniffiandros.bren.common.registry.EnchantmentReg;
 import nl.sniffiandros.bren.common.registry.ItemReg;
 import nl.sniffiandros.bren.common.registry.SoundReg;
-import nl.sniffiandros.bren.common.utils.GunHelper;
 
 public class HeavyRifleItem extends BulletOnlyGun {
     public HeavyRifleItem(Settings settings, ToolMaterial material, GunProperties gunProperties) {

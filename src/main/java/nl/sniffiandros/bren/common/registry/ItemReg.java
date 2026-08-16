@@ -11,6 +11,9 @@ import nl.sniffiandros.bren.common.Bren;
 import nl.sniffiandros.bren.common.config.MConfig;
 import nl.sniffiandros.bren.common.registry.custom.*;
 import nl.sniffiandros.bren.common.registry.custom.types.*;
+import nl.sniffiandros.bren.common.registry.custom.ColorableMagazineItem;
+import nl.sniffiandros.bren.common.registry.custom.MagazineItem;
+import nl.sniffiandros.bren.common.registry.custom.types.*;
 
 public class ItemReg {
 
@@ -36,6 +39,8 @@ public class ItemReg {
 
     public static final float DB_SHOTGUN_RECOIL = 35f;
     public static final float DB_SHOTGUN_DAMAGE = MConfig.dbshotgunDamage.get();
+    public static final float NETHERITE_DB_SHOTGUN_DAMAGE = MConfig.netheritedbshotgunDamage.get();
+
 
     // Revolver
     public static final float REVOLVER_RECOIL = 15f;
@@ -45,19 +50,24 @@ public class ItemReg {
     // pistol!!
     public static final float PISTOL_RECOIL = 12f;
     public static final float PISTOL_DAMAGE = MConfig.pistolDamage.get();
-    // no netherite yet
+    public static final float NETHERITE_PISTOL_DAMAGE = MConfig.netheritepistolDamage.get();
+    // now netherite!!
 
     public static final float SMG_RECOIL = 4;
     public static final float SMG_DAMAGE = MConfig.smgDamage.get();
+    public static final float NETHERITE_SMG_DAMAGE = MConfig.netheritesmgDamage.get();
 
     public static final float HEAVY_MG_RECOIL = 7;
     public static final float HEAVY_MG_DAMAGE = MConfig.heavyMGDamage.get();
+    public static final float NETHERITE_HEAVY_MG_DAMAGE = MConfig.netheriteheavyMGDamage.get();
 
     public static final float AUTO_SHOTGUN_RECOIL = 20;
     public static final float AUTO_SHOTGUN_DAMAGE = MConfig.autoshotgunDamage.get();
+    public static final float NETHERITE_AUTO_SHOTGUN_DAMAGE = MConfig.netheriteautoshotgunDamage.get();
 
     public static final float HEAVY_RIFLE_RECOIL = 35;
     public static final float HEAVY_RIFLE_DAMAGE = MConfig.heavyrifleDamage.get();
+    public static final float NETHERITE_HEAVY_RIFLE_DAMAGE = MConfig.netheriteheavyrifleDamage.get();
 
     public static final Item MACHINE_GUN = registerItem("machine_gun", new MachineGunItem(
             new FabricItemSettings(), ToolMaterials.IRON, TagReg.MEDIUM_MAGAZINES, new GunProperties().rangedDamage(MACHINE_GUN_DAMAGE).fireRate(3).recoil(MACHINE_GUN_RECOIL)
@@ -66,6 +76,10 @@ public class ItemReg {
     public static final Item HEAVY_MG = registerItem("heavy_mg", new HeavyMGItem(
             new FabricItemSettings(), ToolMaterials.IRON, TagReg.HEAVY_MAGAZINES, new GunProperties().rangedDamage(HEAVY_MG_DAMAGE).fireRate(4).recoil(HEAVY_MG_RECOIL)
             .shootSound(SoundReg.ITEM_HEAVY_MG_SHOOT, SoundReg.ITEM_HEAVY_MG_SHOOT_SILENCED)));
+
+    public static final Item NETHERITE_HEAVY_MG = registerItem("netherite_heavy_mg", new HeavyMGItem(
+            new FabricItemSettings().fireproof(), ToolMaterials.NETHERITE, TagReg.HEAVY_MAGAZINES, new GunProperties().rangedDamage(NETHERITE_HEAVY_MG_DAMAGE).fireRate(4).recoil(HEAVY_MG_RECOIL)
+            .shootSound(SoundReg.ITEM_HEAVY_MG_SHOOT, null)));
 
     public static final Item NETHERITE_MACHINE_GUN = registerItem("netherite_machine_gun", new MachineGunItem(
             new FabricItemSettings().fireproof(), ToolMaterials.NETHERITE, TagReg.MEDIUM_MAGAZINES, new GunProperties().rangedDamage(N_MACHINE_GUN_DAMAGE).fireRate(3).recoil(MACHINE_GUN_RECOIL)
@@ -87,6 +101,10 @@ public class ItemReg {
             new FabricItemSettings(), ToolMaterials.IRON, new GunProperties().rangedDamage(HEAVY_RIFLE_DAMAGE).fireRate(20).recoil(HEAVY_RIFLE_RECOIL)
             .shootSound(SoundReg.ITEM_HEAVY_RIFLE_SHOOT, null)));
 
+    public static final Item NETHERITE_HEAVY_RIFLE = registerItem("netherite_heavy_rifle", new HeavyRifleItem(
+            new FabricItemSettings().fireproof(), ToolMaterials.NETHERITE, new GunProperties().rangedDamage(NETHERITE_HEAVY_RIFLE_DAMAGE).fireRate(20).recoil(HEAVY_RIFLE_RECOIL)
+            .shootSound(SoundReg.ITEM_HEAVY_RIFLE_SHOOT, null)));
+
     public static final Item NETHERITE_RIFLE = registerItem("netherite_rifle", new GunWithMagItem(
             new FabricItemSettings().fireproof(), ToolMaterials.NETHERITE, TagReg.SHORT_MAGAZINES, new GunProperties().rangedDamage(N_RIFLE_DAMAGE).fireRate(20).recoil(RIFLE_RECOIL)
             .shootSound(SoundReg.ITEM_RIFLE_SHOOT, SoundReg.ITEM_RIFLE_SHOOT_SILENCED)));
@@ -103,16 +121,32 @@ public class ItemReg {
             new FabricItemSettings() , ToolMaterials.IRON, TagReg.LIGHT_MAGAZINES, new GunProperties().rangedDamage(PISTOL_DAMAGE).fireRate(6).recoil(PISTOL_RECOIL)
             .shootSound(SoundReg.ITEM_PISTOL_SHOOT, SoundReg.ITEM_PISTOL_SHOOT_SILENCED)));
 
+    public static final Item NETHERITE_PISTOL = registerItem("netherite_pistol", new PistolItem(
+            new FabricItemSettings().fireproof() , ToolMaterials.NETHERITE, TagReg.LIGHT_MAGAZINES, new GunProperties().rangedDamage(NETHERITE_PISTOL_DAMAGE).fireRate(6).recoil(PISTOL_RECOIL)
+            .shootSound(SoundReg.ITEM_PISTOL_SHOOT, null)));
+
     public static final Item SMG = registerItem("smg", new GunWithMagItem(
-            new FabricItemSettings() , ToolMaterials.IRON, TagReg.LIGHT_MAGAZINES, new GunProperties().rangedDamage(SMG_DAMAGE).fireRate(2).recoil(MACHINE_GUN_RECOIL)
+            new FabricItemSettings() , ToolMaterials.IRON, TagReg.LIGHT_MAGAZINES, new GunProperties().rangedDamage(SMG_DAMAGE).fireRate(2).recoil(SMG_RECOIL)
+            .shootSound(SoundReg.ITEM_SMG_SHOOT, SoundReg.ITEM_SMG_SHOOT_SILENCED)));
+
+    public static final Item NETHERITE_SMG = registerItem("netherite_smg", new GunWithMagItem(
+            new FabricItemSettings().fireproof() , ToolMaterials.NETHERITE, TagReg.LIGHT_MAGAZINES, new GunProperties().rangedDamage(NETHERITE_SMG_DAMAGE).fireRate(2).recoil(SMG_RECOIL)
             .shootSound(SoundReg.ITEM_SMG_SHOOT, SoundReg.ITEM_SMG_SHOOT_SILENCED)));
 
     public static final Item DB_SHOTGUN = registerItem("db_shotgun", new DBShotgunItem(
             new FabricItemSettings(), ToolMaterials.IRON, new GunProperties().rangedDamage(DB_SHOTGUN_DAMAGE).fireRate(15).recoil(SHOTGUN_RECOIL).bulletSpeed(1.8F)
             .shootSound(SoundReg.ITEM_DB_SHOTGUN_SHOOT, null)));
 
+    public static final Item NETHERITE_DB_SHOTGUN = registerItem("netherite_db_shotgun", new DBShotgunItem(
+            new FabricItemSettings().fireproof(), ToolMaterials.NETHERITE, new GunProperties().rangedDamage(NETHERITE_DB_SHOTGUN_DAMAGE).fireRate(15).recoil(SHOTGUN_RECOIL).bulletSpeed(1.8F)
+            .shootSound(SoundReg.ITEM_DB_SHOTGUN_SHOOT, null)));
+
     public static final Item AUTO_SHOTGUN = registerItem("auto_shotgun", new AutoShotgunItem(
             new FabricItemSettings(), ToolMaterials.IRON, new GunProperties().rangedDamage(AUTO_SHOTGUN_DAMAGE).fireRate(10).recoil(AUTO_SHOTGUN_RECOIL).bulletSpeed(1.8F)
+            .shootSound(SoundReg.ITEM_DB_SHOTGUN_SHOOT, null)));
+
+    public static final Item NETHERITE_AUTO_SHOTGUN = registerItem("netherite_auto_shotgun", new AutoShotgunItem(
+            new FabricItemSettings().fireproof(), ToolMaterials.NETHERITE, new GunProperties().rangedDamage(NETHERITE_AUTO_SHOTGUN_DAMAGE).fireRate(10).recoil(AUTO_SHOTGUN_RECOIL).bulletSpeed(1.8F)
             .shootSound(SoundReg.ITEM_DB_SHOTGUN_SHOOT, null)));
 
     public static final Item REVOLVER = registerItem("revolver", new RevolverItem(

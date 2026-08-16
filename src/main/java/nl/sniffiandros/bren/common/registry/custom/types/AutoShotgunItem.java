@@ -1,19 +1,14 @@
 package nl.sniffiandros.bren.common.registry.custom.types;
 
-import net.minecraft.client.render.model.json.ModelTransformationMode;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.util.math.RotationAxis;
 import nl.sniffiandros.bren.common.registry.EnchantmentReg;
 import nl.sniffiandros.bren.common.registry.ItemReg;
 import nl.sniffiandros.bren.common.registry.SoundReg;
-import nl.sniffiandros.bren.common.utils.GunHelper;
 
 public class AutoShotgunItem extends BulletOnlyGun {
 
