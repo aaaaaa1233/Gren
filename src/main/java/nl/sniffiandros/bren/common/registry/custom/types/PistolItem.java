@@ -37,12 +37,18 @@ public class PistolItem extends GunWithMagItem {
                 matrices.translate(0, 0, 0);
             }
 
-            matrices.translate(0, 0, (reloading ? sin / 3 : 0));
+
+            // how the heck was this animated with only numbers??
+            // i dont know how to make whatever variables to decide the sines so im spamming if statemnts
+
+
+            matrices.multiply(RotationAxis.NEGATIVE_Z.rotation((reloading ? sin / -3 : 0)));
+            matrices.translate(0, (reloading ? sin / 5 : -0.15), 0);
 
             matrices.multiply(RotationAxis.NEGATIVE_X.rotation(cooldownProgress * 3));
-
             if (cooldownProgress >= cooldownProgress/2) {
-
+                matrices.multiply(RotationAxis.POSITIVE_Z.rotation((reloading ? sin / 3 : 0)));
+                matrices.translate(0, (reloading ? sin / 7 : 0.0), 0);
                 matrices.multiply(RotationAxis.POSITIVE_X.rotation(cooldownProgress * 6));
             }
 
