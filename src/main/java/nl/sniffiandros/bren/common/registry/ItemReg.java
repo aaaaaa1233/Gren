@@ -37,7 +37,7 @@ public class ItemReg {
     public static final float SHOTGUN_DAMAGE = MConfig.shotgunDamage.get();
     public static final float N_SHOTGUN_DAMAGE = MConfig.netheriteShotgunDamage.get();
 
-    public static final float DB_SHOTGUN_RECOIL = 35f;
+    public static final float DB_SHOTGUN_RECOIL = 27f;
     public static final float DB_SHOTGUN_DAMAGE = MConfig.dbshotgunDamage.get();
     public static final float NETHERITE_DB_SHOTGUN_DAMAGE = MConfig.netheritedbshotgunDamage.get();
 
@@ -61,7 +61,7 @@ public class ItemReg {
     public static final float HEAVY_MG_DAMAGE = MConfig.heavyMGDamage.get();
     public static final float NETHERITE_HEAVY_MG_DAMAGE = MConfig.netheriteheavyMGDamage.get();
 
-    public static final float AUTO_SHOTGUN_RECOIL = 20;
+    public static final float AUTO_SHOTGUN_RECOIL = 18;
     public static final float AUTO_SHOTGUN_DAMAGE = MConfig.autoshotgunDamage.get();
     public static final float NETHERITE_AUTO_SHOTGUN_DAMAGE = MConfig.netheriteautoshotgunDamage.get();
 
@@ -134,11 +134,11 @@ public class ItemReg {
             .shootSound(SoundReg.ITEM_SMG_SHOOT, SoundReg.ITEM_SMG_SHOOT_SILENCED)));
 
     public static final Item DB_SHOTGUN = registerItem("db_shotgun", new DBShotgunItem(
-            new FabricItemSettings(), ToolMaterials.IRON, new GunProperties().rangedDamage(DB_SHOTGUN_DAMAGE).fireRate(15).recoil(SHOTGUN_RECOIL).bulletSpeed(1.8F)
+            new FabricItemSettings(), ToolMaterials.IRON, new GunProperties().rangedDamage(DB_SHOTGUN_DAMAGE).fireRate(15).recoil(DB_SHOTGUN_RECOIL).bulletSpeed(1.8F)
             .shootSound(SoundReg.ITEM_DB_SHOTGUN_SHOOT, null)));
 
     public static final Item NETHERITE_DB_SHOTGUN = registerItem("netherite_db_shotgun", new DBShotgunItem(
-            new FabricItemSettings().fireproof(), ToolMaterials.NETHERITE, new GunProperties().rangedDamage(NETHERITE_DB_SHOTGUN_DAMAGE).fireRate(15).recoil(SHOTGUN_RECOIL).bulletSpeed(1.8F)
+            new FabricItemSettings().fireproof(), ToolMaterials.NETHERITE, new GunProperties().rangedDamage(NETHERITE_DB_SHOTGUN_DAMAGE).fireRate(15).recoil(DB_SHOTGUN_RECOIL).bulletSpeed(1.8F)
             .shootSound(SoundReg.ITEM_DB_SHOTGUN_SHOOT, null)));
 
     public static final Item AUTO_SHOTGUN = registerItem("auto_shotgun", new AutoShotgunItem(

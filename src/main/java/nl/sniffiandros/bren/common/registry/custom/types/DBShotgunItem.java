@@ -46,19 +46,16 @@ public class DBShotgunItem extends BulletOnlyGun {
         return false;
     }
 
-    @Override
-    public int bulletLifespan() {
-        return 9;
-    }
+
 
     @Override
     public float spread() {
-        return 7.0F;
+        return 7.5F;
     }
 
     @Override
     public int bulletAmount() {
-        return 15;
+        return 18;
     }
 
     @Override
