@@ -1,3 +1,3 @@
-# Gren
-A fork of Bren that adds new guns to the mod,
-and reworks previous gun crafting recipes to make the new guns fit in the crafting table
+# GrenX
+A fork of Gren that develops more onto the philosophy that firearms should be loud and dangerous in minecraft,
+making ammo dramatically more expensive, making guns always deal a lethal amount of damage from the get-go to compensate
