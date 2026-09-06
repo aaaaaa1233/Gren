@@ -8,24 +8,7 @@ import nl.sniffiandros.bren.common.registry.custom.types.GunWithMagItem;
 import nl.sniffiandros.bren.common.registry.custom.MagazineItem;
 
 public class ModModelPredicateProvider {
-    public static void regModels() {
-        regGun(ItemReg.MACHINE_GUN, true);
-        regGun(ItemReg.HEAVY_MG, false);
-        regGun(ItemReg.AUTO_GUN, true);
-        regGun(ItemReg.RIFLE, false);
-        regGun(ItemReg.SMG, false);
-        regGun(ItemReg.NETHERITE_MACHINE_GUN, true);
-        regGun(ItemReg.NETHERITE_HEAVY_MG, false);
-        regGun(ItemReg.NETHERITE_MACHINE_GUN, true);
-        regGun(ItemReg.NETHERITE_SMG, false);
-        regGun(ItemReg.NETHERITE_AUTO_GUN, true);
-        regGun(ItemReg.NETHERITE_RIFLE, false);
-        regMag(ItemReg.MAGAZINE);
-        regMag(ItemReg.CLOTHED_MAGAZINE);
-        regMag(ItemReg.HEAVY_MAGAZINE);
-        regMag(ItemReg.SHORT_MAGAZINE);
-        regMag(ItemReg.LIGHT_MAGAZINE);
-    }
+
 
 
     private static void regGun(Item machineGun, boolean colorable) {

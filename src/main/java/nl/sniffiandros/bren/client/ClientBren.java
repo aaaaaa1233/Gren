@@ -56,41 +56,26 @@ public class ClientBren implements ClientModInitializer {
         ClientNetworkReg.recoilPacket();
         EntityRendererRegistry.register(Bren.BULLET, BulletRenderer::new);
         KeyBindingReg.reg();
-        ModModelPredicateProvider.regModels();
+
 
         if (MConfig.showAmmoGui.get()) {
             HudRenderCallback.EVENT.register(new HudOverlay());
         }
 
         List<ModelIdentifier> modelIdentifierList = new ArrayList<>();
-        registerGUIModels(Registries.ITEM.getId(ItemReg.MACHINE_GUN), modelIdentifierList, true, true);
-        registerGUIModels(Registries.ITEM.getId(ItemReg.HEAVY_MG), modelIdentifierList, false, true);
-        registerGUIModels(Registries.ITEM.getId(ItemReg.HEAVY_RIFLE), modelIdentifierList, false, false);
-        registerGUIModels(Registries.ITEM.getId(ItemReg.AUTO_GUN), modelIdentifierList, true, true);
+
         registerGUIModels(Registries.ITEM.getId(ItemReg.RIFLE), modelIdentifierList, false, true);
-        registerGUIModels(Registries.ITEM.getId(ItemReg.SMG), modelIdentifierList, false, true);
-        registerGUIModels(Registries.ITEM.getId(ItemReg.AUTO_SHOTGUN), modelIdentifierList, false, false);
+
         registerGUIModels(Registries.ITEM.getId(ItemReg.SHOTGUN), modelIdentifierList, false, false);
-        registerGUIModels(Registries.ITEM.getId(ItemReg.DB_SHOTGUN), modelIdentifierList, false, false);
-        registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_MACHINE_GUN), modelIdentifierList, true, true);
-        registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_AUTO_GUN), modelIdentifierList, true, true);
-        registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_RIFLE), modelIdentifierList, false, true);
-        registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_SHOTGUN), modelIdentifierList, false, false);
-        registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_AUTO_SHOTGUN), modelIdentifierList, false, false);
-        registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_DB_SHOTGUN), modelIdentifierList, false, false);
-        registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_HEAVY_RIFLE), modelIdentifierList, false, false);
-        registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_HEAVY_MG), modelIdentifierList, false, true);
-        registerGUIModels(Registries.ITEM.getId(ItemReg.NETHERITE_SMG), modelIdentifierList, false, true);
+
         ModelLoadingPlugin.register(
                 (manager) -> manager.addModels(
                         modelIdentifierList)
         );
 
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> tintIndex > 0 ? -1 : ((DyeableItem)(stack.getItem())).getColor(stack),
-                ItemReg.CLOTHED_MAGAZINE);
 
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> tintIndex > 0 ? -1 : ((GunWithMagItem)(stack.getItem())).getColor(stack),
-                ItemReg.MACHINE_GUN, ItemReg.AUTO_GUN, ItemReg.NETHERITE_MACHINE_GUN, ItemReg.NETHERITE_AUTO_GUN);
+
+
 
         LivingEntityFeatureRendererRegistrationCallback.EVENT.register((t, r, e, c) -> {
             if (r instanceof PlayerEntityRenderer && MConfig.renderGunOnBack.get()) {

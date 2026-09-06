@@ -21,11 +21,10 @@
   ],
   "rewards": {
     "recipes": [
-      "bren:auto_gun",
-      "bren:machine_gun",
+
       "bren:rifle",
-      "bren:shotgun",
-      "bren:revolver"
+      "bren:shotgun"
+
     ]
   },
   "sends_telemetry_event": false

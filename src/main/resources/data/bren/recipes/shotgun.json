@@ -11,14 +11,14 @@
     "F": {
       "item": "minecraft:iron_block"
     },
-    "P": {
-      "tag": "minecraft:logs"
+    "I": {
+      "item": "minecraft:iron_ingot"
     }
   },
   "pattern": [
     "T  ",
     "TFM",
-    " PP"
+    " II"
   ],
   "result": {
     "item": "bren:shotgun"

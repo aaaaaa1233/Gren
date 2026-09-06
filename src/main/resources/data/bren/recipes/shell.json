@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "M": {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:gold_nugget"
     },
     "P": {
       "item": "minecraft:paper"
@@ -22,7 +22,7 @@
   ],
   "result": {
     "item": "bren:shell",
-    "count": 12
+    "count": 2
   },
   "show_notification": true
 }

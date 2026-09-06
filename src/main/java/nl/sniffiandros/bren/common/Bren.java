@@ -25,7 +25,7 @@ import nl.sniffiandros.bren.common.registry.custom.criterion.LongShootingCriteri
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static nl.sniffiandros.bren.common.registry.ItemReg.LIGHT_MAGAZINE;
+
 
 public class Bren implements ModInitializer {
 	public static final String MODID = "bren";
@@ -64,49 +64,11 @@ public class Bren implements ModInitializer {
 		});
 
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-			MagazineItem m = (MagazineItem) ItemReg.MAGAZINE;
-			MagazineItem cm = (MagazineItem) ItemReg.CLOTHED_MAGAZINE;
-			MagazineItem sm = (MagazineItem) ItemReg.SHORT_MAGAZINE;
-            MagazineItem lm = (MagazineItem) LIGHT_MAGAZINE;
-            MagazineItem hm = (MagazineItem) ItemReg.HEAVY_MAGAZINE;
-			ItemStack mag = mag(m);
-			ItemStack clothed_mag = mag(cm);
-			ItemStack short_mag = mag(sm);
-            ItemStack light_mag = mag(lm);
-            ItemStack heavy_mag = mag(hm);
 
-            content.addAfter(Items.CROSSBOW, ItemReg.HEAVY_MG);
-			content.addAfter(ItemReg.HEAVY_MG, ItemReg.MACHINE_GUN);
-            content.addAfter(ItemReg.MACHINE_GUN, ItemReg.SMG);
-			content.addAfter(ItemReg.SMG, ItemReg.AUTO_GUN);
-            content.addAfter(ItemReg.AUTO_GUN, ItemReg.AUTO_SHOTGUN);
-			content.addAfter(ItemReg.AUTO_SHOTGUN, ItemReg.SHOTGUN);
-            content.addAfter(ItemReg.SHOTGUN, ItemReg.DB_SHOTGUN);
-			content.addAfter(ItemReg.DB_SHOTGUN, ItemReg.RIFLE);
-            content.addAfter(ItemReg.RIFLE, ItemReg.HEAVY_RIFLE);
-			content.addAfter(ItemReg.HEAVY_RIFLE, ItemReg.REVOLVER);
-            content.addAfter(ItemReg.REVOLVER, ItemReg.PISTOL);
-            content.addAfter(ItemReg.PISTOL, ItemReg.NETHERITE_HEAVY_MG);
-			content.addAfter(ItemReg.NETHERITE_HEAVY_MG, ItemReg.NETHERITE_MACHINE_GUN);
-            content.addAfter(ItemReg.NETHERITE_MACHINE_GUN, ItemReg.NETHERITE_SMG);
-			content.addAfter(ItemReg.NETHERITE_SMG, ItemReg.NETHERITE_AUTO_GUN);
-            content.addAfter(ItemReg.NETHERITE_AUTO_GUN, ItemReg.NETHERITE_AUTO_SHOTGUN);
-			content.addAfter(ItemReg.NETHERITE_AUTO_SHOTGUN, ItemReg.NETHERITE_SHOTGUN);
-			content.addAfter(ItemReg.NETHERITE_SHOTGUN, ItemReg.NETHERITE_DB_SHOTGUN);
-            content.addAfter(ItemReg.NETHERITE_DB_SHOTGUN, ItemReg.NETHERITE_RIFLE);
-            content.addAfter(ItemReg.NETHERITE_RIFLE, ItemReg.NETHERITE_HEAVY_RIFLE);
-			content.addAfter(ItemReg.NETHERITE_HEAVY_RIFLE, ItemReg.NETHERITE_REVOLVER);
-            content.addAfter(ItemReg.NETHERITE_REVOLVER, ItemReg.NETHERITE_PISTOL);
-			content.addAfter(Items.DIAMOND_HORSE_ARMOR, ItemReg.HEAVY_MAGAZINE);
-            content.addAfter(ItemReg.HEAVY_MAGAZINE, heavy_mag);
-            content.addAfter(heavy_mag, ItemReg.MAGAZINE);
-			content.addAfter(ItemReg.MAGAZINE, mag);
-			content.addAfter(mag, ItemReg.CLOTHED_MAGAZINE);
-			content.addAfter(ItemReg.CLOTHED_MAGAZINE, clothed_mag);
-			content.addAfter(clothed_mag, ItemReg.SHORT_MAGAZINE);
-			content.addAfter(ItemReg.SHORT_MAGAZINE, short_mag);
-            content.addAfter(short_mag, ItemReg.LIGHT_MAGAZINE);
-            content.addAfter(LIGHT_MAGAZINE, light_mag);
+
+            content.addAfter(Items.CROSSBOW, ItemReg.RIFLE);
+			content.addAfter(ItemReg.RIFLE, ItemReg.SHOTGUN);
+
 			content.addAfter(Items.ARROW, ItemReg.BULLET);
 			content.addAfter(ItemReg.BULLET, ItemReg.SHELL);
 		});

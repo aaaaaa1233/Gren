@@ -16,7 +16,6 @@ import net.minecraft.village.TradeOffer;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.poi.PointOfInterestType;
 import nl.sniffiandros.bren.common.Bren;
-import nl.sniffiandros.bren.common.registry.custom.trade.TradeClothedMagFactory;
 import nl.sniffiandros.bren.common.registry.custom.trade.TradeRandomGunEnchantmentFactory;
 import nl.sniffiandros.bren.common.registry.custom.trade.TradeRandomGunFactory;
 
@@ -50,32 +49,24 @@ public class VillagerRegistry {
                 factories -> {
                     factories.add(((entity, random) -> {
                         TradeOffer a = new TradeOffer(
-                                new ItemStack(Items.GUNPOWDER, 16),
+                                new ItemStack(Items.GUNPOWDER, 12),
                                 new ItemStack(Items.EMERALD, 1),
                                 6, 3, 0.02f
                         );
 
+
+
                         return random.nextFloat() > .4f ? a : new TradeRandomGunEnchantmentFactory(3, 4).create(entity, random);
                     }));
                     factories.add(((entity, random) -> new TradeOffer(
-                            new ItemStack(Items.EMERALD, 3),
-                            new ItemStack(random.nextFloat() < .5f ? ItemReg.MAGAZINE : ItemReg.SHORT_MAGAZINE, 1),
-                            6, 2, 0.03f
+                            new ItemStack(Items.EMERALD, 6),
+                            new ItemStack(ItemReg.METAL_TUBE, 1),
+                            5, 3, 0.025f
                     )));
                 });
 
         TradeOfferHelper.registerVillagerOffers(GUNSMITH,2,
                 factories -> {
-                    factories.add(((entity, random) -> new TradeOffer(
-                            new ItemStack(ItemReg.MAGAZINE, 1),
-                            new ItemStack(Items.EMERALD, 1),
-                            12, 6, 0.03f
-                    )));
-                    factories.add(((entity, random) -> new TradeOffer(
-                            new ItemStack(ItemReg.SHORT_MAGAZINE, 1),
-                            new ItemStack(Items.EMERALD, 1),
-                            12, 6, 0.03f
-                    )));
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.COPPER_INGOT, 4),
                             new ItemStack(Items.EMERALD, 1),
@@ -86,7 +77,7 @@ public class VillagerRegistry {
         TradeOfferHelper.registerVillagerOffers(GUNSMITH,3,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
-                            new ItemStack(Items.EMERALD, 20),
+                            new ItemStack(Items.EMERALD, 15),
                             new ItemStack(ItemReg.AUTO_LOADER_CONTRAPTION, 1),
                             6, 10, 0.03f
                     )));
@@ -97,28 +88,19 @@ public class VillagerRegistry {
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 2),
-                            new ItemStack(random.nextFloat() < .5 ? ItemReg.BULLET : ItemReg.SHELL, 16),
-                            12, 14, 0.03f
+                            new ItemStack(random.nextFloat() < .5 ? ItemReg.BULLET : ItemReg.SHELL, 1),
+                            8, 14, 0.03f
                     )));
-                    factories.add(((entity, random) -> {
-                        TradeOffer a = new TradeOffer(
-                                new ItemStack(Items.TNT, 1),
-                                new ItemStack(Items.EMERALD, 6),
-                                12, 17, 0.03f
-                        );
-
-                        return random.nextFloat() > .5f ? a : new TradeClothedMagFactory(4, 15).create(entity, random);
-                    }));
                 });
 
         TradeOfferHelper.registerVillagerOffers(GUNSMITH,5,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 2),
-                            new ItemStack(random.nextFloat() < .5 ? ItemReg.BULLET : ItemReg.SHELL, 16),
-                            15, 14, 0.03f
+                            new ItemStack(random.nextFloat() < .5 ? ItemReg.BULLET : ItemReg.SHELL, 1),
+                            8, 14, 0.03f
                     )));
-                    factories.add(new TradeRandomGunFactory(20, 17));
+                    factories.add(new TradeRandomGunFactory(25, 17));
                 });
     }
 }

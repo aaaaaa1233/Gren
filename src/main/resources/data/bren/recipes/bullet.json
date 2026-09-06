@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "M": {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:gold_nugget"
     },
     "I": {
       "item": "minecraft:copper_ingot"
@@ -19,7 +19,7 @@
   ],
   "result": {
     "item": "bren:bullet",
-    "count": 24
+    "count": 3
   },
   "show_notification": true
 }

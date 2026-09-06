@@ -18,11 +18,9 @@ import java.util.Set;
 public class TradeRandomGunFactory implements TradeOffers.Factory {
 
     private static final Set<Item> GUNS = ImmutableList.of(
-            ItemReg.MACHINE_GUN,
-            ItemReg.AUTO_GUN,
             ItemReg.RIFLE,
-            ItemReg.SHOTGUN,
-            ItemReg.REVOLVER
+            ItemReg.SHOTGUN
+
     ).stream().collect(ImmutableSet.toImmutableSet());
 
     private final int price;

@@ -16,15 +16,12 @@
     },
     "L": {
       "item": "minecraft:lever"
-    },
-    "P": {
-      "tag": "minecraft:logs"
     }
   },
   "pattern": [
     "TI ",
-    "PFM",
-    " LP"
+    "IFM",
+    " LI"
   ],
   "result": {
     "item": "bren:rifle"

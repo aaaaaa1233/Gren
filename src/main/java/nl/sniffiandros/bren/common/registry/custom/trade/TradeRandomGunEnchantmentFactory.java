@@ -19,12 +19,10 @@ import java.util.Set;
 public class TradeRandomGunEnchantmentFactory implements TradeOffers.Factory {
 
     private static final Set<Enchantment> ENCHANTS = ImmutableList.of(
-            EnchantmentReg.AUTOFILL,
             EnchantmentReg.OVERFLOW,
             EnchantmentReg.SILENCED,
             EnchantmentReg.STEADY_HANDS,
-            EnchantmentReg.FIRE_LANCE,
-            EnchantmentReg.MOUNTED
+            EnchantmentReg.FIRE_LANCE
     ).stream().collect(ImmutableSet.toImmutableSet());
 
     private final int price;
